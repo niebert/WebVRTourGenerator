@@ -1,0 +1,43 @@
+{
+  "name": "class_editor_uml",
+  "version": "0.0.1",
+  "description": "Class Editor for UML Diagrams developed with Javascript Code Templates based on JSON Editor of Jeremy Dorn",
+  "main": "src/main.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "watchify": "^3.9.0",
+    "uglify-js": "^2.6.2",
+    "doctoc":"^1.3.0"
+  },
+  "scripts": {
+    "watch": "watchify src/main.js -o dist/class_editor_uml.js -v",
+    "build": "browserify src/main.js  | uglifyjs -mc warnings=false > dist/class_editor_uml.min.js",
+    "test": "firefox docs/index.html",
+    "compress": "uglifyjs dist/class_editor_uml.js --compress -o docs/js/class_editor_uml.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niebert/ClassEditorUML.git"
+  },
+  "keywords": [
+    "Unified",
+    "Modelling",
+    "Language",
+    "UML",
+    "Editor",
+    "JSON",
+    "Schema",
+    "Javascript",
+    "Code",
+    "Generation"
+  ],
+  "author": "Engelbert Niehaus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niebert/ClassEditorUML/issues"
+  },
+  "homepage": "https://github.com/niebert/ClassEditorUML#readme"
+}
